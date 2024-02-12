@@ -1,0 +1,25 @@
+﻿<Window x:Class="MessangerServer.BanDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MessangerServer"
+        mc:Ignorable="d"
+        Title="BanDialog" MaxHeight="250" Height="Auto" MaxWidth="520">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Ban Reason" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Margin="3"/>
+        <TextBox Name="ReasonInput" Grid.Row="0" Grid.Column="1" Margin="4,2"/>
+        <TextBlock Text="Input the date, when person will be forgived" TextWrapping="Wrap" Grid.Column="0" Grid.Row="1" Margin="3"/>
+        <DatePicker Name="BanDate" Grid.Column="1" Grid.Row="1" Margin="4,2"/>
+        <Button Content="Ban Person" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,5" Click="Send_Ban"/>
+    </Grid>
+</Window>
