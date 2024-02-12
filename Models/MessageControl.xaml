@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Primary_Massager.Models.MessageControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Primary_Massager.Models"
+             mc:Ignorable="d" 
+             Height="auto"
+             MaxHeight="175"
+             d:DesignWidth="150"
+             Name="message">
+    <StackPanel Background="AliceBlue" MaxWidth="150">
+        <DockPanel>
+            <TextBlock Text="{Binding ElementName=message, Path=SenderName}" FontSize="13" Margin="0,0,10,5" MaxWidth="100"/>
+            <TextBlock Text="{Binding ElementName=message, Path=SendDate}" FontSize="12" Margin="0,0,0,5" MaxWidth="50"/>
+        </DockPanel>
+        <TextBox Name="MainTextField" IsEnabled="False" Text="{Binding ElementName=message, Path=MessageText}" FontSize="14" Width="Auto" MaxWidth="120" Height="Auto" HorizontalAlignment="Left" TextWrapping="Wrap"/>
+        <TextBlock FontSize="9" MaxWidth="25" HorizontalAlignment="Right" x:Name="EditedBlock"/>
+    </StackPanel>
+</UserControl>
